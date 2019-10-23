@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_body"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <include
+        android:id="@+id/titleBarRelativeLayout"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/bottomRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/title_bottom"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/loginButton"
+            style="@style/button"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="登录" />
+
+        <Button
+            android:id="@+id/registerButton"
+            style="@style/button"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="120dp"
+            android:text="注册" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/userNameTextView"
+        style="@style/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleBarRelativeLayout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:text="账号：" />
+
+    <EditText
+        android:id="@+id/userNameEditText"
+        style="@style/text1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignBaseline="@id/userNameTextView"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/userNameTextView"
+        android:background="@drawable/background_edit"
+        android:hint="请输入用户名或绑定的手机号码"
+        android:maxLength="12" />
+
+    <TextView
+        android:id="@+id/passwordTextView"
+        style="@style/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/userNameTextView"
+        android:layout_below="@id/userNameTextView"
+        android:layout_marginTop="40dp"
+        android:text="密码：" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        style="@style/text1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignBaseline="@id/passwordTextView"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/passwordTextView"
+        android:background="@drawable/background_edit"
+        android:inputType="textPassword"
+        android:maxLength="12" />
+
+    <TextView
+        android:id="@+id/errorTextView"
+        style="@style/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/passwordTextView"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="账号或密码错误，请重新输入"
+        android:visibility="invisible" />
+
+    <include
+        android:id="@+id/cornerMenuRelativeLayout"
+        layout="@layout/corner_menu" />
+
+</RelativeLayout>

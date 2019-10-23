@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_body" >
+
+    <include
+        android:id="@+id/titleBarRelativeLayout"
+        layout="@layout/title_bar" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleBarRelativeLayout" >
+    </ListView>
+
+    <include
+        android:id="@+id/cornerMenuRelativeLayout"
+        layout="@layout/corner_menu" />
+
+</RelativeLayout>

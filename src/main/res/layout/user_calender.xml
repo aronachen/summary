@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/titleBarRelativeLayout"
+        layout="@layout/title_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/bottomRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+        <Button
+            android:id="@+id/addButton"
+            style="@style/button"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="添加日程"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_below="@+id/titleBarRelativeLayout"
+        android:layout_above="@id/bottomRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#EEEEEE">
+            <RelativeLayout
+                android:id="@+id/preMonth"
+                android:layout_width="70dp"
+                android:layout_height="55dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/yearMonthTextView">
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="9dp"
+                    android:layout_height="14dp"
+                    android:background="@drawable/bt_calendar_last"/>
+            </RelativeLayout>
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="110dp" />
+            <com.qst.giftems.activity.KCalendar
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"/>
+            <ListView
+                android:id="@+id/eventsListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

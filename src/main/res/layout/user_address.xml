@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_body"
+    android:gravity="center" >
+
+    <include
+        android:id="@+id/titleBarRelativeLayout"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/bottomRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/title_bottom"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/okButton"
+            style="@style/button"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="保存" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomRelativeLayout"
+        android:layout_below="@id/titleBarRelativeLayout"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            style="@style/text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="请输入收礼人个人信息和详细地址：" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收礼人：" />
+
+            <EditText
+                android:id="@+id/nameEditText"
+                style="@style/text1"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:background="@drawable/background_edit" >
+            </EditText>
+
+            <TextView
+                style="@style/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="手机号：" />
+
+            <EditText
+                android:id="@+id/mobileEditText"
+                style="@style/text1"
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:background="@drawable/background_edit"
+                android:inputType="phone" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="地址：" />
+
+            <Spinner
+                android:id="@+id/provinceSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/citySpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/areaSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </Spinner>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/addressEditText"
+            style="@style/text1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/background_edit"
+            android:gravity="left|top"
+            android:hint="请输入详细的街道地址"
+            android:padding="10dp"
+            android:singleLine="false" >
+        </EditText>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/cornerMenuRelativeLayout"
+        layout="@layout/corner_menu" />
+
+</RelativeLayout>
